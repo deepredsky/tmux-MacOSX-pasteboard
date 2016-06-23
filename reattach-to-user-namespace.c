@@ -128,7 +128,9 @@ int main(int argc, char *argv[]) {
         warn("%s: unsupported old OS, trying as if it were 10.5", argv[0]);
         os = 100500;
     } else if (os > 101100) {
-        warn("%s: unsupported new OS, trying as if it were 10.10", argv[0]);
+        /* works fine in macOS sierra, get rid of the warning though */
+        /* the warning messes up paste in vim */
+        /* warn("%s: unsupported new OS, trying as if it were 10.10", argv[0]); */
         os = 101000;
     }
 
